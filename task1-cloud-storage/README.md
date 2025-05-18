@@ -12,6 +12,8 @@
 
 ## Public File URL
 [Click to view sample file](https://storage.cloud.google.com/codtech-atharva-storage123/sample.txt)
+[Click to view sample img file](https://storage.cloud.google.com/codtech-atharva-storage123/Picture2.png)
+[Click to view sample xlsx file](https://storage.cloud.google.com/codtech-atharva-storage123/sample.xlsx)
 
 ## Access Configuration
 - Public access granted to `sample.txt` only
