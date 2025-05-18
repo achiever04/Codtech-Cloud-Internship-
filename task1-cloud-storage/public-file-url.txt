@@ -1,1 +1,3 @@
 https://storage.cloud.google.com/codtech-atharva-storage123/sample.txt
+https://storage.cloud.google.com/codtech-atharva-storage123/Picture2.png
+https://storage.cloud.google.com/codtech-atharva-storage123/sample.xlsx
