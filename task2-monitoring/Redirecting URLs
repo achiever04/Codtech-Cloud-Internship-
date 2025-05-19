@@ -1,0 +1,3 @@
+https://console.cloud.google.com/compute/instancesDetail/zones/us-central1-f/instances/codtech-monitor-vm?inv=1&invt=Abx0VA&project=codtech-tasks
+https://console.cloud.google.com/logs/query;query=resource.type%3D%22gce_instance%22%20resource.labels.instance_id%3D%221855976670130292785%22;cursorTimestamp=2025-05-19T15:04:32.113513476Z;duration=PT1H?inv=1&invt=Abx0VA&project=codtech-tasks
+https://console.cloud.google.com/monitoring/alerting/policies/10124557341836957238?inv=1&invt=Abx0VA&project=codtech-tasks
