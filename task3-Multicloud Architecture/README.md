@@ -1,66 +1,64 @@
-# Task 3: Multi-Cloud Architecture – Google Cloud & AWS
+# Task 3: Multi-Cloud Architecture – GCP + AWS
 
 ## Objective
-To design a multi-cloud architecture that distributes application services across two cloud providers — Google Cloud Platform (GCP) and Amazon Web Services (AWS) — demonstrating interoperability, flexibility, and vendor independence.
+To design and demonstrate a working multi-cloud application architecture that connects a frontend hosted on **Google Cloud Storage (GCP)** to a backend Flask API hosted on an **AWS EC2 instance**.
 
 ---
 
 ## Architecture Overview
 
-This architecture represents a basic **Blog Web App** where:
-
-- **Frontend Layer** is hosted on **Google Cloud (GCP)**
-  - App Engine or Cloud Run handles dynamic content
-  - Static assets are served from **Google Cloud Storage (GCS)**
-
-- **Backend Layer** runs on **Amazon Web Services (AWS)**
-  - AWS Lambda or EC2 handles API logic
-  - Data is stored in **AWS RDS (MySQL)**
-
-Communication between the layers is done through **HTTP-based API calls**.
+- **Frontend**: Static HTML hosted in a GCP Cloud Storage bucket
+- **Backend**: Flask API running on AWS EC2
+- **Communication**: HTTP call from GCP to AWS
+- **CORS** enabled to allow cross-origin requests
 
 ---
 
 ## Architecture Diagram
 
-![Multi-Cloud Architecture Diagram](screenshots/multi-cloud-diagram.png)
-
-*Note: This diagram illustrates the user’s request to the GCP-hosted frontend and the API call from GCP to AWS services.*
+![Multi-Cloud Architecture](screenshots/architecture-diagram.png)
 
 ---
 
-## Components Used
+## Steps Performed
 
-| Layer        | Service            | Platform     |
-|--------------|--------------------|--------------|
-| Frontend     | App Engine / Cloud Run | GCP      |
-| Static Assets| Cloud Storage      | GCP          |
-| Backend Logic| AWS Lambda / EC2   | AWS          |
-| Database     | AWS RDS (MySQL)    | AWS          |
+### 🔹 AWS (Backend)
+- Launched EC2 instance with Amazon Linux 2023
+- Installed Python, Flask, and Flask-CORS
+- Ran API on port 80 returning `Hello from AWS EC2 Flask Backend!`
+- Configured security group to allow HTTP access (port 80)
 
----
-
-## Benefits of Multi-Cloud Approach
-
-- **Avoids Vendor Lock-In:** Freedom to switch between providers or mix and match best tools.
-- **Increased Redundancy:** Failure in one platform doesn't affect the entire system.
-- **Optimized Costs & Features:** Use each platform’s strengths (e.g., GCP for scalable apps, AWS for robust backend).
+### 🔹 GCP (Frontend)
+- Created a static HTML page that makes an HTTP fetch call to the AWS EC2 API
+- Uploaded it to a GCP bucket
+- Made the file public and accessed it via the bucket's public URL
 
 ---
 
-## Potential Enhancements
+## Demo
 
-- Use **API Gateway** on AWS to manage and secure API endpoints
-- Enable **Cloud Monitoring** in both clouds for unified observability
-- Set up **CI/CD pipelines** to deploy frontend and backend independently
+🔗 [Click to view frontend (GCP)](http://storage.googleapis.com/your-bucket-name/index.html)
+
+📡 Backend Response:
+> Hello from AWS EC2 Flask Backend!
 
 ---
 
 ## Screenshots
-- `multi-cloud-diagram.png`: Visual representation of the architecture
+
+| Screenshot                  | Description                           |
+|----------------------------|---------------------------------------|
+| `architecture-diagram.png` | Visual layout of the system           |
+| `ec2-running.png`          | AWS EC2 instance in running state     |
+| `flask-output.png`         | Browser showing backend response      |
+| `frontend-html.png`        | GCP bucket hosting index.html         |
+| `api-call-success.png`     | Final API output on frontend          |
 
 ---
 
-## Notes
-This architecture demonstrates interoperability between two major cloud providers and serves as a foundation for real-world scalable applications.
+## Tools Used
 
+- Google Cloud Platform: Cloud Storage
+- Amazon Web Services: EC2
+- Flask (Python)
+- Flask-CORS (for CORS support)
