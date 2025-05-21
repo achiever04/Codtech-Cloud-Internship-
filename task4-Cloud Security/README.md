@@ -25,7 +25,8 @@ To implement basic cloud security principles across Google Cloud Platform (GCP) 
   - **Port 80 (HTTP)**
 - Removed access to all other ports
 
-> Screenshot: `security-group.png`
+> Screenshot:
+- `security-group.png`
 
 ---
 
