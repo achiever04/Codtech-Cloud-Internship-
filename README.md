@@ -30,7 +30,7 @@ This repository contains all the tasks completed as part of the **Cloud Computin
 - Deployed a Flask API backend on **AWS EC2**
 - Enabled **CORS**, ensured frontend-backend communication via HTTP
 
-📂 [View Task 3 Folder](./task3-multi-cloud-architecture/)
+📂 [View Task 3 Folder](./task3-Multicloud-Architecture/)
 
 ---
 
@@ -39,7 +39,7 @@ This repository contains all the tasks completed as part of the **Cloud Computin
 - Hardened **AWS Security Group rules** to allow only SSH and HTTP
 - Made a GCP bucket **private** and enabled **access logging**
 
-📂 [View Task 4 Folder](./task4-cloud-security/)
+📂 [View Task 4 Folder](./task4-Cloud-Security/)
 
 ---
 
